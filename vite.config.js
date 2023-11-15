@@ -8,4 +8,18 @@ export default defineConfig({
             refresh: true,
         }),
     ],
+    server: {
+        https: true,
+    },
+    build: {
+        manifest: true,
+        rollupOptions: {
+            input: {
+                app: 'resources/js/app.js',
+                appCss: 'resources/css/app.css',
+                index: 'resources/js/index.js',
+                indexCss: 'resources/css/index.css',
+            }
+        }
+    }
 });

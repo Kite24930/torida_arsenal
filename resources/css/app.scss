@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;600&family=Yomogi&display=swap');
+//font-family: 'Edu TAS Beginner', cursive;
+//font-family: 'Yomogi', cursive;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+root {
+
+}
+
+* {
+    font-family: 'Yomogi', cursive;;
+}
+
+.en-text {
+    font-family: 'Edu TAS Beginner', cursive;
+}
+

@@ -1,0 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@400;600&family=Yomogi&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  font-family: "Yomogi", cursive;
+}
+
+.en-text {
+  font-family: "Edu TAS Beginner", cursive;
+}
+
+/*# sourceMappingURL=app.css.map */
