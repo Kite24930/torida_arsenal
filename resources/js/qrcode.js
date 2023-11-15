@@ -68,7 +68,7 @@ function qrCreate() {
         height: 300,
         type: "canvas",
         data: qrData,
-        image: "storage/KT_logo.png",
+        image: "/torida/storage/KT_logo.png",
         qrOptions: {
             errorCorrectionLevel: 'H',
         },
