@@ -19,6 +19,8 @@ export default defineConfig({
                 appCss: 'resources/css/app.css',
                 index: 'resources/js/index.js',
                 indexCss: 'resources/css/index.css',
+                qrcode: 'resources/js/qrcode.js',
+                qrcodeCss: 'resources/css/qrcode.css',
             }
         }
     }

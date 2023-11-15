@@ -10,4 +10,9 @@ class MainController extends Controller
     {
         return view('index');
     }
+
+    public function qrcode()
+    {
+        return view('qrcode');
+    }
 }
