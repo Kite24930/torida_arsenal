@@ -1,6 +1,9 @@
 import jsQR from "jsqr";
+import QRCodeStyling from "qr-code-styling";
 
-window.addEventListener('load', () => {
+document.getElementById('qr-reader').addEventListener('click', qrCodeReading);
+
+function qrCodeReading() {
     let video = document.createElement('video');
     let canvas = document.getElementById('canvas');
     let ctx = canvas.getContext('2d');
@@ -51,4 +54,35 @@ window.addEventListener('load', () => {
         ctx.lineTo(end.x, end.y);
         ctx.stroke();
     }
-})
+}
+
+document.getElementById('qr-creator').addEventListener('click', qrCreate);
+
+function qrCreate() {
+    const qrCodeElement = document.getElementById('qr-code');
+    qrCodeElement.innerHTML = '';
+    const qrData = document.getElementById('qr-text').value;
+
+    const qrCode = new QRCodeStyling({
+        width: 300,
+        height: 300,
+        type: "canvas",
+        data: qrData,
+        image: "storage/KT_logo.png",
+        qrOptions: {
+            errorCorrectionLevel: 'H',
+        },
+        dotsOptions: {
+            color: "#000000",
+            type: "rounded"
+        },
+        backgroundOptions: {
+            color: "#ffffff",
+        },
+        imageOptions: {
+            crossOrigin: "anonymous",
+        }
+    });
+
+    qrCode.append(qrCodeElement);
+}
